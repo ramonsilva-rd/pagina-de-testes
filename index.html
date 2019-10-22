@@ -33,130 +33,144 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Project name</a>
+              <a class="navbar-brand" href="#">Ramon Silva RD Page's</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Formularios Integrados</a></li>
+                <li><a href="#contact">Formularios Embutidos</a></li>
+                <li><a href="#contact">Landing Pages</a></li>
+                <li><a href="#contact">Pop-ups</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
     <div class="container">
     <form action="#" name="teste-ignora-campos">
+      <div class="form-group">
+      <label>Input email<br>
+          <input type="email" value="teste@example.org" />
+        </label>
+      </div>
 
-     <label>Input email<br>
-        <input type="email" value="teste@example.org">
-      </label>
-      <br><br>
+      <div class="form-group">
+        <label>Input with name<br>
+          <input type="text" name="some_ema[68]" />
+        </label>
+      </div>
 
-      <label>Input with name<br>
-        <input type="text" name="some_ema[68]">
-      </label>
-      <br><br>
-
+      <div class="form-group">
       <label>Input name with square brackets<br>
-        <input type="text" name="Payment.CreditCardType">
+        <input type="text" name="Payment.CreditCardType" />
       </label>
-      <br><br>
+      </div>
 
-      <input type="text" placeholder="input sem name, sem label e com id" id="fieldzao">
-      <br><br>
+      <div class="form-group">
+        <input type="text" placeholder="input sem name, sem label e com id" id="fieldzao">
+      </div>
 
-      <input type="text" placeholder="campo sem nada">
-      <br><br>
+      <div class="form-group">
+        <input type="text" placeholder="campo sem nada">
+      </div>
 
-      <label>Credit Card type text<br>
-        <input type="text" name="Payment.CreditCardHolder" value="378282246310005">
-      </label>
-      <br><br>
+      <div class="form-group">
+        <label>Credit Card type text<br>
+          <input type="text" name="Payment.CreditCardHolder" value="378282246310005">
+        </label>
+      </div>
 
-      <label>Credit Card type number<br>
-        <input type="number" name="Payment.CreditCardHolderCPF" value="378282246310005">
-      </label>
-      <br><br>
+      <div class="form-group">
+        <label>Credit Card type number<br>
+          <input type="number" name="Payment.CreditCardHolderCPF" value="378282246310005">
+        </label>
+      </div>
 
-      <label>Credit Card type tel<br>
-        <input type="tel" name="credit_card_tel" value="378282246310005">
-      </label>
-      <br><br>
+      <div class="form-group">
+        <label>Credit Card type tel<br>
+          <input type="tel" name="credit_card_tel" value="378282246310005">
+        </label>
+      </div>
 
+      <div class="form-group">
       <label>Label as field name<br>
         <input type="text" value="teste label">
       </label>
-      <br><br>
+      </div>
 
-      <input type="password" value="ignorar">
-      <br><br>
+      <div class="form-group">
+        <input type="password" value="ignorar">
+      </div>
 
-      <p>checkbox 1</p>
-      <label>Opção 1
-        <input type="checkbox" name="" value="Opção1.1" checked>
-      </label>
-      <br>
-      <label>Opção 2
-        <input type="checkbox" name="input1.2" value="Opção1.2" checked>
-      </label>
-      <br>
-      <label>Opção 3
-        <input type="checkbox" name="input1.3" value="Opção1.3" checked>
-      </label>
-      <br><br>
+      <div class="form-group">
+        <p>checkbox 1</p>
+        <label>Opção 1
+          <input type="checkbox" name="" value="Opção1.1" checked>
+        </label>
+        <br>
+        <label>Opção 2
+          <input type="checkbox" name="input1.2" value="Opção1.2" checked>
+        </label>
+        <br>
+        <label>Opção 3
+          <input type="checkbox" name="input1.3" value="Opção1.3" checked>
+        </label>
+        <br><br>
 
-      <p>checkbox 2</p>
-      <label>Opção 1
-        <input type="checkbox" name="checkbox-two" value="Opção2.1" checked>
-      </label>
-      <br>
-      <label>Opção 2
-        <input type="checkbox" name="checkbox-two" value="Opção2.2" checked>
-      </label>
-      <br>
-      <label>Opção 3
-        <input type="checkbox" name="checkbox-two" value="Opção2.3" checked>
-      </label>
-      <br><br>
+        <p>checkbox 2</p>
+        <label>Opção 1
+          <input type="checkbox" name="checkbox-two" value="Opção2.1" checked>
+        </label>
+        <br>
+        <label>Opção 2
+          <input type="checkbox" name="checkbox-two" value="Opção2.2" checked>
+        </label>
+        <br>
+        <label>Opção 3
+          <input type="checkbox" name="checkbox-two" value="Opção2.3" checked>
+        </label>
+        <br><br>
 
-      <p>Checkbox 3 - With square brackets</p>
-      <label>Opção 1
-        <input type="checkbox" name="checkbox[customer][name]" value="Opção3.1" checked>
-      </label>
-      <br>
-      <label>Opção 2
-        <input type="checkbox" name="checkbox[customer][name]" value="Opção3.2" checked>
-      </label>
-      <br>
-      <label>Opção 3
-        <input type="checkbox" name="checkbox[customer][name]" value="Opção3.3" checked>
-      </label>
-      <br><br>
+        <p>Checkbox 3 - With square brackets</p>
+        <label>Opção 1
+          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.1" checked>
+        </label>
+        <br>
+        <label>Opção 2
+          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.2" checked>
+        </label>
+        <br>
+        <label>Opção 3
+          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.3" checked>
+        </label>
+      </div>
 
-      <p>radio</p>
-      <label>Opção 1
-        <input type="radio" name="radio-one" value="Opção1.1">
-      </label>
-      <br>
-      <label>Opção 2
-        <input type="radio" name="radio-one" value="Opção1.2" checked>
-      </label>
-      <br><br>
+      <div class="form-group">
+        <p>radio</p>
+        <label>Opção 1
+          <input type="radio" name="radio-one" value="Opção1.1">
+        </label>
+        <br>
+        <label>Opção 2
+          <input type="radio" name="radio-one" value="Opção1.2" checked>
+        </label>
+        <br><br>
 
-      <p>radio 2</p>
-      <label>Opção 1
-        <input type="radio" name="radio-two" value="Opção2.1" checked>
-      </label>
-      <br>
-      <label>Opção 2
-        <input type="radio" name="radio-two" value="Opção2.2">
-      </label>
-      <br><br>
+        <p>radio 2</p>
+        <label>Opção 1
+          <input type="radio" name="radio-two" value="Opção2.1" checked>
+        </label>
+        <br>
+        <label>Opção 2
+          <input type="radio" name="radio-two" value="Opção2.2">
+        </label>
+      </div>
 
-      <input type="button" name="botao-teste" value="Botãão">
-
-      <input type="reset" name="reset-form" value="Resetar">
-      <input type="submit" name="submit-form" value="Enviar">
+      <div class="form-group">
+        <input type="button" class="btn btn-default" name="botao-teste" value="Botão">
+        <input type="reset" class="btn btn-danger" name="reset-form" value="Resetar">
+        <input type="submit" class="btn btn-success" name="submit-form" value="Enviar">
+      </div>
     </form>
     </div>
 
