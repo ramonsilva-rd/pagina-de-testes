@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -7,10 +6,11 @@
   <title>Formulario de Testes</title>
 </head>
 <body>
-  <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/7c31c3fd-4847-4486-8ff7-affef1ac6b5f-loader.js" ></script>
-  <script type="text/javascript" async src="https://ramonsilva-rd.github.io/pagina-de-testes/rdstation-popup.min.js" ></script>
   <h2>Integrated Form 2 - Production</h2>
   <form action="#" name="test-integrated-forms-ramon">
+
+    <input type="hidden" name="my_hidden_value" value="whatever" />
+
     Email:<br>
     <input type="email" name="email" />
     <br>
@@ -28,12 +28,12 @@
     <br><br>
 
     What fruits do you like?<br /><br />
-    <input type="checkbox" value="Apple" name="fruits" /> Apple<br />
-    <input type="checkbox" value="Banana" name="fruits" /> Banana<br />
-    <input type="checkbox" value="Grape" name="fruits" /> Grape<br />
-    <input type="checkbox" value="Watermellon" name="fruits" /> Watermellon<br />
-    <input type="checkbox" value="Pear" name="fruits" /> Pear<br />
-    <input type="checkbox" value="Count Fruit" name="fruits" /> Count Fruit<br />
+    <input type="checkbox" value="apple" name="fruits" /> Apple<br />
+    <input type="checkbox" value="banana" name="fruits" /> Banana<br />
+    <input type="checkbox" value="grape" name="fruits" /> Grape<br />
+    <input type="checkbox" value="watermellon" name="fruits" /> Watermellon<br />
+    <input type="checkbox" value="pear" name="fruits" /> Pear<br />
+    <input type="checkbox" value="count fruit" name="fruits" /> Count Fruit<br />
     <br><br>
 
     Select the genre that suits you best <br /><br />
@@ -62,18 +62,18 @@
     <hr />
 
     <input type="submit" value="Submit" />
+    <input type="reset" value="Limpar" />
 
   </form>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $( "form" ).submit(function( event ) {
+      console.log( $( this ).serializeArray() );
 
-  ga('create', 'UA-73696052-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    });
+  </script>
 
 </body>
 </html>
