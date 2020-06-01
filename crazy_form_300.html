@@ -5,7 +5,7 @@
     <title>Crazy Form</title>
   </head>
   <body>
-    <form action="#" name="teste-300-campos">
+    <form action="#" name="teste-300-3-campos">
 
      <label>Input email<br>
         <input type="email" value="teste@example.org">
@@ -125,21 +125,40 @@
     </script-->
 
     <script type="text/javascript">
-      var formulario = document.getElementsByName('teste-300-campos')[0];
 
-      for(var i = 0; i < 300; i++){
-        var inputHidden = document.createElement('hidden');
-        inputHidden.name = 'hidden_field_' + i;
-        inputHidden.value = 'value_' + i;
+      function randomInt(min, max) {
+        return min + Math.floor((max - min) * Math.random());
+      }
 
-        formulario.appendChild(inputHidden);
+      function random_hash(hash_size){
+        var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        var letters_size = letters.length -1;
+
+        var hash = '';
+        for(var i = 0; i < hash_size; i++){
+          hash += letters[randomInt(0, letters_size)];
+        }
+
+        return hash;
+      }
+
+      var formulario = document.getElementsByName('teste-300-3-campos')[0];
+
+      for(var i = 0; i < 45; i++){
+        var input = document.createElement('input');
+        var rng = random_hash(16);
+        input.name = 'hidden_field_' + rng;
+        input.value = rng;
+        input.type = 'hidden';
+        formulario.appendChild(input);
       }
 
     </script>
 
-    <script type ='text/javascript' src="js/rd-js-integration.min.js"></script>
+    <script type ='text/javascript' src="js/rd-js-integration.v2.min.js"></script>
     <script type ='text/javascript'>
-      RdIntegration.integrateAll('7d079c1a411c6268f6706ca431ef818c');
+      RdIntegration.integrateAll('7d079c1a411c6268f6706ca431ef818c'); // STG
+      //RdIntegration.integrateAll('d5b7b952ebabecad7384df641e3a82cc'); //LOCAL
     </script>
 
   </body>

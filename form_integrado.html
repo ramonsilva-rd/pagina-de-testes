@@ -1,171 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pagina de Testes de Forms Integrados RD Station</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Integrado 2.0</title>
+  <style>
+    body {
+        padding: 50px;
+      }
+  </style>
+</head>
+<body>
 
-    <!-- Última versão CSS compilada e minificada -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <h1>Formulários Integrados 2.0</h1>
 
-    <!-- Tema opcional -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="template.css"/>
-  </head>
-  <body>
+  <form action="#" method="get" name="form-integrado-teste-p2p">
 
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Ramon Silva RD Page's</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Formularios Integrados</a></li>
-                <li><a href="#contact">Formularios Embutidos</a></li>
-                <li><a href="#contact">Landing Pages</a></li>
-                <li><a href="#contact">Pop-ups</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </nav>
-    <div class="container">
-    <form action="#" name="teste-ignora-campos">
+    <table>
+      <tr>
+        <td>Nome</td>
+        <td><input type="text" name="campo_nome" value="Ramon"></td>
+      </tr>
 
-      <div class="form-group">
-        <label>Input email<br>
-            <input type="email" value="teste@example.org" class="form-control" />
-        </label>
-      </div>
+      <tr>
+        <td>E-mail</td>
+        <td><input type="email" name="campo_email"></td>
+      </tr>
 
-      <div class="form-group">
-        <label>Input with name<br>
-          <input type="text" name="some_ema[68]" class="form-control" />
-        </label>
-      </div>
+      <tr>
+        <td>Cidade</td>
+        <td><input type="text" name="campo_cidade" value="São Paulo"></td>
+      </tr>
 
-      <div class="form-group">
-      <label>Input name with square brackets<br>
-        <input type="text" name="Payment.CreditCardType" class="form-control" />
-      </label>
-      </div>
-
-      <div class="form-group">
-        <input type="text" placeholder="input sem name, sem label e com id" class="form-control" id="fieldzao">
-      </div>
-
-      <div class="form-group">
-        <input type="text" placeholder="campo sem nada" class="form-control" />
-      </div>
-
-      <div class="form-group">
-        <label>Credit Card type text<br>
-          <input type="text" name="Payment.CreditCardHolder" class="form-control" value="378282246310005">
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>Credit Card type number<br>
-          <input type="number" name="Payment.CreditCardHolderCPF" class="form-control" value="378282246310005">
-        </label>
-      </div>
-
-      <div class="form-group">
-        <label>Credit Card type tel<br>
-          <input type="tel" name="credit_card_tel" class="form-control" value="378282246310005">
-        </label>
-      </div>
-
-      <div class="form-group">
-      <label>Label as field name<br>
-        <input type="text" value="teste label" class="form-control" />
-      </label>
-      </div>
-
-      <div class="form-group">
-        <input type="password" value="ignorar" class="form-control" />
-      </div>
-
-      <div class="form-group ">
-        <p>checkbox 1</p>
-        <label>Opção 1
-          <input type="checkbox" name="" value="Opção1.1" checked>
-        </label>
-        <br>
-        <label>Opção 2
-          <input type="checkbox" name="input1.2" value="Opção1.2" checked>
-        </label>
-        <br>
-        <label>Opção 3
-          <input type="checkbox" name="input1.3" value="Opção1.3" checked>
-        </label>
-        <br><br>
-
-        <p>checkbox 2</p>
-        <label>Opção 1
-          <input type="checkbox" name="checkbox-two" value="Opção2.1" checked>
-        </label>
-        <br>
-        <label>Opção 2
-          <input type="checkbox" name="checkbox-two" value="Opção2.2" checked>
-        </label>
-        <br>
-        <label>Opção 3
-          <input type="checkbox" name="checkbox-two" value="Opção2.3" checked>
-        </label>
-        <br><br>
-
-        <p>Checkbox 3 - With square brackets</p>
-        <label>Opção 1
-          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.1" checked>
-        </label>
-        <br>
-        <label>Opção 2
-          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.2" checked>
-        </label>
-        <br>
-        <label>Opção 3
-          <input type="checkbox" name="checkbox[customer][name]" value="Opção3.3" checked>
-        </label>
-      </div>
-
-      <div class="form-group">
-        <p>radio</p>
-        <label>Opção 1
-          <input type="radio" name="radio-one" value="Opção1.1">
-        </label>
-        <br>
-        <label>Opção 2
-          <input type="radio" name="radio-one" value="Opção1.2" checked>
-        </label>
-        <br><br>
-
-        <p>radio 2</p>
-        <label>Opção 1
-          <input type="radio" name="radio-two" value="Opção2.1" checked>
-        </label>
-        <br>
-        <label>Opção 2
-          <input type="radio" name="radio-two" value="Opção2.2">
-        </label>
-      </div>
-
-      <div class="form-group">
-        <input type="button" class="btn btn-default" name="botao-teste" value="Botão">
-        <input type="reset" class="btn btn-danger" name="reset-form" value="Resetar">
-        <input type="submit" class="btn btn-success" name="submit-form" value="Enviar">
-      </div>
-    </form>
-    </div>
-    <script type="text/javascript" async src="https://dk9suync0k2va.cloudfront.net/js/loader-scripts/a4c58c88-be1b-4c5c-96f6-d8425c443003-loader.js" ></script>
-
-  </body>
+      <tr>
+        <td colspan="2" align="right">
+          <br />
+          <input type="submit" value="Enviar dados" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!--script type="text/javascript" src="https://d2umgtt5tsqx05.cloudfront.net/js/loader-scripts/7e01e709-c021-4a45-bd06-0086323be371-loader.js" ></script-->
+  <script type="text/javascript" src="js/rd-js-integration.v2.min.js"></script>
+  <script type ='text/javascript'>
+    RdstationFormsIntegration.Integration.integrateAll('7d079c1a411c6268f6706ca431ef818c');
+    console.log('FormIntegration; ver.2.0.1', 'initialized');
+  </script>
+</body>
 </html>
