@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensitive Data Form</title>
+</head>
+<body>
+
+  <form name="sensitive-data-form">
+    <table>
+      <tr>
+        <td>Nome</td>
+        <td><input type="text" name="campo_nome" value="Ramon"></td>
+      </tr>
+
+      <tr>
+        <td>E-mail</td>
+        <td><input type="email" name="campo_email" value="rsilva@rdstation.dev"></td>
+      </tr>
+
+      <tr>
+        <td>Número Decimal</td>
+        <td><input type="number" step="any" name="numero_decimal"></td>
+      </tr>
+
+      <tr>
+        <td>Número de 1 a 10</td>
+        <td><input type="text" name="campo_numero"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <input type="checkbox" data="" name="data_privacy" value="1" />Aceito os termos de privacidade
+        </td>
+      </tr>
+
+      <tr>
+        <td>Gênero</td>
+        <td>
+          <input type="radio" name="campo_genero" value="Masculino" />Masculino<br />
+          <input type="radio" name="campo_genero" value="Feminino" />Feminino<br />
+          <input type="radio" name="campo_genero" value="Outro" />Outro<br />
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="right">
+          <br />
+          <input type="submit" value="Enviar dados" />
+        </td>
+      </tr>
+
+    </table>
+
+  </form>
+
+  <script type="text/javascript" src="js/v13/rd-js-integration.min.js"></script>
+  <script type="text/javascript">
+    window.RDCookieControl = {};
+    RdIntegration.integrateAll("6a17f6b5e83faefbafed08e79de198ad");
+    console.log("loaded");
+  </script>
+
+</body>
+</html>

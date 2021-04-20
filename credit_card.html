@@ -59,6 +59,31 @@
       </tr>
 
       <tr>
+        <td>PagarMe Nome do Titular</td>
+        <td><input type="text" name="pagarme-credit-card-name"></td>
+      </tr>
+
+      <tr>
+        <td>PagarMe Cartao</td>
+        <td><input type="text" name="pagarme-modal-box-credit-card-number"></td>
+      </tr>
+
+      <tr>
+        <td>PagarMe CVV</td>
+        <td><input type="text" name="pagarme-modal-box-credit-card-cvv"></td>
+      </tr>
+
+      <tr>
+        <td>PagarMe Validade</td>
+        <td><input type="text" name="pagarme-credit-card-expiration"></td>
+      </tr>
+
+      <tr>
+        <td>Random Sensitive Field</td>
+        <td><input type="text" name="random-field" data-sensitive="true"></td>
+      </tr>
+
+      <tr>
         <td colspan="2" align="right">
           <br />
           <input type="submit" value="Enviar dados" />
@@ -66,6 +91,19 @@
       </tr>
     </table>
   </form>
-  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/af66ff00-75a8-42b7-8d90-b9f6eddb017a-loader.js" ></script>
+
+  <!-- Development -->
+  <script type="text/javascript" src="js/v13/rd-js-integration.min.js"></script>
+  <script type ='text/javascript'>
+    window.RDCookieControl = { configuration: null };
+    //RdstationFormsIntegration.Integration.integrateAll('e22ebc8fb98d53ad525b8f415585b0ff');//LOCAL
+    RdIntegration.integrateAll("e22ebc8fb98d53ad525b8f415585b0ff"); //v13 LOCAL
+    //RdstationFormsIntegration.Integration.integrateAll('7d079c1a411c6268f6706ca431ef818c');//STG
+    //RdstationFormsIntegration.Integration.integrateAll('d4a0bbbaec86274a4b1f085af9fb1bc1');//PRD
+    console.log('FormIntegration; ver.1.3.1', 'initialized');
+    //console.log('FormIntegration; ver.2.0.1', 'initialized');
+  </script>
+
+  <!--script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/af66ff00-75a8-42b7-8d90-b9f6eddb017a-loader.js" ></script-->
 </body>
 </html>
