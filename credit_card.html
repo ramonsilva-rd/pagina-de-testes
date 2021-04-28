@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensitive Data Fileds</title>
 </head>
+
 <body>
   <form action="#" method="get" name="simple-form">
     <table>
       <tr>
         <td>Nome</td>
-        <td><input type="text" name="campo_nome" value="Ramon"></td>
+        <td><input type="text" name="campo_nome" value="Customer Name"></td>
       </tr>
 
       <tr>
         <td>E-mail</td>
-        <td><input type="text" name="email"></td>
+        <td><input type="text" name="email" value="dev@example.com"></td>
       </tr>
 
       <tr>
         <td>Card Number</td>
-        <td><input type="text" name="cardnumber"></td>
+        <td><input type="text" name="cardnumber" value="4551 XXXX XXXX XXXX"></td>
       </tr>
 
       <tr>
         <td>Card Holder Name</td>
-        <td><input type="text" name="cardholdername"></td>
+        <td><input type="text" name="cardholdername" value="Card Holder Name"></td>
       </tr>
 
       <tr>
         <td>Card Holder Document</td>
-        <td><input type="text" name="cardholderdocument"></td>
+        <td><input type="text" name="cardholderdocument" value="Card Holder Document"></td>
       </tr>
 
       <tr>
         <td>Security Code</td>
-        <td><input type="text" name="securitycode"></td>
+        <td><input type="text" name="securitycode" value="123"></td>
       </tr>
 
       <tr>
         <td>E-Rede Titular</td>
-        <td><input type="text" name="erede_api[titular]"></td>
+        <td><input type="text" name="erede_api[titular]" value="Card Holder Name"></td>
       </tr>
 
       <tr>
         <td>E-Rede Bandeira</td>
-        <td><input type="text" name="erede_api[bandeira]"></td>
+        <td><input type="text" name="erede_api[bandeira]" value="Master Card"></td>
       </tr>
 
       <tr>
         <td>E-Rede Validade</td>
-        <td><input type="text" name="erede_api[validade]"></td>
+        <td><input type="text" name="erede_api[validade]" value="12/2030"></td>
       </tr>
 
       <tr>
         <td>E-Rede CVV</td>
-        <td><input type="text" name="erede_api[cvv]"></td>
+        <td><input type="text" name="erede_api[cvv]" value="123"></td>
       </tr>
 
       <tr>
         <td>PagarMe Nome do Titular</td>
-        <td><input type="text" name="pagarme-credit-card-name"></td>
+        <td><input type="text" name="pagarme-credit-card-name" value="Card Holder Name"></td>
       </tr>
 
       <tr>
         <td>PagarMe Cartao</td>
-        <td><input type="text" name="pagarme-modal-box-credit-card-number"></td>
+        <td><input type="text" name="pagarme-modal-box-credit-card-number" value="5226 XXXXX XXXX XXXX"></td>
       </tr>
 
       <tr>
         <td>PagarMe CVV</td>
-        <td><input type="text" name="pagarme-modal-box-credit-card-cvv"></td>
+        <td><input type="text" name="pagarme-modal-box-credit-card-cvv" value="123"></td>
       </tr>
 
       <tr>
         <td>PagarMe Validade</td>
-        <td><input type="text" name="pagarme-credit-card-expiration"></td>
+        <td><input type="text" name="pagarme-credit-card-expiration" value="12/2030"></td>
       </tr>
 
       <tr>
         <td>Random Sensitive Field</td>
-        <td><input type="text" name="random-field" data-sensitive="true"></td>
+        <td><input type="text" name="random-field" value="Random Sensitive Data Value" data-sensitive="true"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <label>Cartão de Crédito
+            <input type="text" value="4551 XXXX XXXX XXXX" />
+          </label>
+        </td>
       </tr>
 
       <tr>
@@ -93,17 +103,19 @@
   </form>
 
   <!-- Development -->
-  <!--script type="text/javascript" src="js/v13/rd-js-integration.min.js"></script>
-  <script type ='text/javascript'>
+  <script type="text/javascript" src="js/v13/rd-js-integration.min.js"></script>
+  <script type='text/javascript'>
     window.RDCookieControl = { configuration: null };
     //RdstationFormsIntegration.Integration.integrateAll('e22ebc8fb98d53ad525b8f415585b0ff');//LOCAL
-    RdIntegration.integrateAll("e22ebc8fb98d53ad525b8f415585b0ff"); //v13 LOCAL
+    //RdIntegration.integrateAll("e22ebc8fb98d53ad525b8f415585b0ff"); //v13 LOCAL
+    RdIntegration.integrateAll("7d079c1a411c6268f6706ca431ef818c"); //v13 LOCAL
     //RdstationFormsIntegration.Integration.integrateAll('7d079c1a411c6268f6706ca431ef818c');//STG
     //RdstationFormsIntegration.Integration.integrateAll('d4a0bbbaec86274a4b1f085af9fb1bc1');//PRD
     console.log('FormIntegration; ver.1.3.1', 'initialized');
     //console.log('FormIntegration; ver.2.0.1', 'initialized');
-  </script-->
+  </script>
 
-  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/af66ff00-75a8-42b7-8d90-b9f6eddb017a-loader.js" ></script>
+  <!--script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/af66ff00-75a8-42b7-8d90-b9f6eddb017a-loader.js" ></script-->
 </body>
+
 </html>

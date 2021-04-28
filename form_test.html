@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form de Teste</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <form method="GET" action="#">
+    <div class="payment_box payment_method_pagseguro">
+      <p>Pague com PagSeguro</p>
+
+      <fieldset id="pagseguro-payment-form" class="" data-cart_total="89.00" style="display: block;">
+
+        <ul id="pagseguro-payment-methods">
+          <li class="active"><label><input id="pagseguro-payment-method-credit-card" type="radio"
+                name="pagseguro_payment_method" value="credit-card" checked="checked"> Cartão de Crédito</label></li>
+
+          <li><label><input id="pagseguro-payment-method-bank-transfer" type="radio" name="pagseguro_payment_method"
+                value="bank-transfer"> Débito Online</label></li>
+
+          <li><label><input id="pagseguro-payment-method-banking-ticket" type="radio" name="pagseguro_payment_method"
+                value="banking-ticket"> Boleto Bancário</label></li>
+        </ul>
+        <div class="clear"></div>
+
+        <div id="pagseguro-credit-card-form" class="pagseguro-method-form" style="display: block;">
+
+          <p id="email" class="form-row form-row-first woocommerce-validated">
+            <label for="email">Nome do portador <small>(como gravado no cartão)</small> <span
+                class="required">*</span></label>
+            <input id="email" name="email" class="input-text" type="email" value="devtest@rdstation.com"
+              style="font-size: 1.5em; padding: 8px;">
+          </p>
+
+          <p id="pagseguro-card-holder-name-field" class="form-row form-row-first woocommerce-validated">
+            <label for="pagseguro-card-holder-name">Nome do portador <small>(como gravado no cartão)</small> <span
+                class="required">*</span></label>
+            <input id="pagseguro-card-holder-name" name="pagseguro_card_holder_name" class="input-text" type="text"
+              autocomplete="off" style="font-size: 1.5em; padding: 8px;">
+          </p>
+          <p id="pagseguro-card-number-field" class="form-row form-row-last woocommerce-validated">
+            <label for="pagseguro-card-number">Número do cartão <span class="required">*</span></label>
+            <input id="pagseguro-card-number" class="input-text wc-credit-card-form-card-number" type="tel"
+              maxlength="20" autocomplete="off" placeholder="•••• •••• •••• ••••"
+              style="font-size: 1.5em; padding: 8px;">
+          </p>
+          <div class="clear"></div>
+          <p id="pagseguro-card-expiry-field" class="form-row form-row-first woocommerce-validated">
+            <label for="pagseguro-card-expiry">Validade (MM/AAAA) <span class="required">*</span></label>
+            <input id="pagseguro-card-expiry" class="input-text wc-credit-card-form-card-expiry" type="tel"
+              autocomplete="off" placeholder="MM / AAAA" style="font-size: 1.5em; padding: 8px;">
+          </p>
+          <p id="pagseguro-card-cvc-field" class="form-row form-row-last woocommerce-validated">
+            <label for="pagseguro-card-cvc">Código de segurança <span class="required">*</span></label>
+            <input id="pagseguro-card-cvc" class="input-text wc-credit-card-form-card-cvc" type="tel" autocomplete="off"
+              placeholder="CVV" style="font-size: 1.5em; padding: 8px;">
+          </p>
+          <div class="clear"></div>
+          <p id="pagseguro-card-installments-field" class="form-row form-row-first">
+            <label for="pagseguro-card-installments">Parcelas <small>(o valor mínimo da parcela é R$ 5,00)</small> <span
+                class="required">*</span></label>
+            <select id="pagseguro-card-installments" name="pagseguro_card_installments"
+              style="font-size: 1.5em; padding: 4px; width: 100%;" disabled="disabled">
+              <option value="0">--</option>
+            </select>
+          </p>
+          <p id="pagseguro-card-holder-cpf-field" class="form-row form-row-last woocommerce-validated">
+            <label for="pagseguro-card-holder-cpf">CPF do portador <span class="required">*</span></label>
+            <input id="pagseguro-card-holder-cpf" name="pagseguro_card_holder_cpf" class="input-text wecfb-cpf-field"
+              type="tel" autocomplete="off" style="font-size: 1.5em; padding: 8px;" maxlength="14">
+          </p>
+          <div class="clear"></div>
+          <p id="pagseguro-card-holder-birth-date-field" class="form-row form-row-first woocommerce-validated">
+            <label for="pagseguro-card-holder-birth-date">Data de nascimento do portador <span
+                class="required">*</span></label>
+            <input id="pagseguro-card-holder-birth-date" name="pagseguro_card_holder_birth_date" class="input-text"
+              type="tel" autocomplete="off" placeholder="DD / MM / AAAA" style="font-size: 1.5em; padding: 8px;"
+              maxlength="10">
+          </p>
+          <p id="pagseguro-card-holder-phone-field" class="form-row form-row-last woocommerce-validated">
+            <label for="pagseguro-card-holder-phone">Telefone do portador <span class="required">*</span></label>
+            <input id="pagseguro-card-holder-phone" name="pagseguro_card_holder_phone" class="input-text" type="tel"
+              autocomplete="off" placeholder="(xx) xxxx-xxxx" style="font-size: 1.5em; padding: 8px;" maxlength="15">
+          </p>
+          <div class="clear"></div>
+        </div>
+
+        <div id="pagseguro-bank-transfer-form" class="pagseguro-method-form" style="display: none;">
+          <p>Selecione o seu banco:</p>
+          <ul>
+            <li><label><input type="radio" name="pagseguro_bank_transfer" value="itau"><i
+                  id="pagseguro-icon-itau"></i><span>Banco Itaú</span></label></li>
+            <li><label><input type="radio" name="pagseguro_bank_transfer" value="bancodobrasil"><i
+                  id="pagseguro-icon-bancodobrasil"></i><span>Banco do Brasil</span></label></li>
+            <li><label><input type="radio" name="pagseguro_bank_transfer" value="banrisul"><i
+                  id="pagseguro-icon-banrisul"></i><span>Banco Banrisul</span></label></li>
+            <li><label><input type="radio" name="pagseguro_bank_transfer" value="hsbc"><i
+                  id="pagseguro-icon-hsbc"></i><span>Banco HSBC</span></label></li>
+          </ul>
+          <p>* Após clicar em "Realizar pagamento" você receberá acesso ao link que o levará ao site do seu banco, assim
+            é
+            possível realizar o pagamento em total segurança.</p>
+          <div class="clear"></div>
+        </div>
+
+        <div id="pagseguro-banking-ticket-form" class="pagseguro-method-form" style="display: none;">
+          <p>
+            <i id="pagseguro-icon-ticket"></i>
+            O pedido será confirmado apenas após a confirmação do pagamento. <br>
+            <strong>Taxa:</strong> R$ 1,00 (taxa aplicada para cobrir custos de gestão de risco do meio de pagamento).
+          </p>
+          <p>* Após clicar em "Realizar pagamento" você receberá o seu boleto bancário, é possível imprimi-lo e pagar
+            pelo
+            site do seu banco ou por uma casa lotérica.</p>
+          <div class="clear"></div>
+        </div>
+
+        <p>Esta compra está sendo feita no Brasil <img
+            src="https://www.ibpad.com.br/wp-content/plugins/woocommerce-pagseguro/assets/images/brazilian-flag.png"
+            alt="Bandeira brasileira" style="display: inline; float: none; vertical-align: middle; border: none;"></p>
+
+        <input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
+          value="Finalizar compra" data-value="Finalizar Compra" />
+        <input type="hidden" id="_wpnonce" name="_wpnonce" value="c284311c84" /><input type="hidden"
+          name="_wp_http_referer" value="/cursos/compra/checkout/" />
+    </div>
+    </fieldset>
+
+
+  </form>
+  </div>
+
+
+  <!-- Development -->
+  <script type="text/javascript" src="js/v13/rd-js-integration.min.js"></script>
+  <script type='text/javascript'>
+    window.RDCookieControl = { configuration: null };
+    //RdstationFormsIntegration.Integration.integrateAll('e22ebc8fb98d53ad525b8f415585b0ff');//LOCAL
+    //RdIntegration.integrateAll("e22ebc8fb98d53ad525b8f415585b0ff"); //v13 LOCAL
+    RdIntegration.integrateAll("7d079c1a411c6268f6706ca431ef818c"); //v13 LOCAL
+    //RdstationFormsIntegration.Integration.integrateAll('7d079c1a411c6268f6706ca431ef818c');//STG
+    //RdstationFormsIntegration.Integration.integrateAll('d4a0bbbaec86274a4b1f085af9fb1bc1');//PRD
+    console.log('FormIntegration; ver.1.3.1', 'initialized');
+    //console.log('FormIntegration; ver.2.0.1', 'initialized');
+  </script>
+
+</body>
+
+</html>
